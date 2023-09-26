@@ -1,0 +1,17 @@
+import math
+print("Уравнение имеет вид: ax^2 + bx + c = 0")
+a = float(input("Введиете значене коэффицента а: "))
+b = float(input("Введиете значене коэффицента b: "))
+c = float(input("Введиете значене коэффицента c: "))
+print(a,"x^2", b, "x",c,"= 0")
+D = b*b-4*a*c
+print("Дискриминант D = ", D)
+if D > 0:
+    x1 = (-b + math.sqrt(D)) / (2 * a)
+    x2 = (-b - math.sqrt(D)) / (2 * a)
+    print(x1, x2)
+elif D == 0:
+    x = -b / (2 * a)
+    print(x)
+else:
+    print("Корней нет")
